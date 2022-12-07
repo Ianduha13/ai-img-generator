@@ -25,6 +25,6 @@
 }
 .submit{
   height: 32px;
-  background: #000;
-  color: #fff;
+  background-color: var(--primary-color);
+  color: var(--primary-bg-color);
 }

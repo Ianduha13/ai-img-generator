@@ -13,15 +13,11 @@ const Navbar = ({ theme, handleThemeChange }) => {
           target={"_blank"}
           rel='noreferrer'
         >
-          {theme === "light" ? (
-            <FaGithub size='1.25em' color='black' />
-          ) : (
-            <FaGithub size='1.25em' color='white' />
-          )}
+          <FaGithub size='1.25em' color='white' />
         </a>
         <button className='navbar-btn' onClick={handleThemeChange}>
           {theme === "light" ? (
-            <FaMoon size='1.25em' color='black' />
+            <FaMoon size='1.25em' color='white' />
           ) : (
             <FaSun size='1.25em' color='white' />
           )}

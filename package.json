@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index",
-    "dev": "nodemon index"
+    "client": "npm start --prefix public/ai-img-generator",
+    "dev": "concurrently \"nodemon index\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
     "openai": "^3.1.0"
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "nodemon": "^2.0.20"
   }
 }
