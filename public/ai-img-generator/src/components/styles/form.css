@@ -16,15 +16,28 @@
   align-items: center;
 }
 .form-input{
-  display: block;
   margin-top: 12px;
   height: 32px;
   width: 80%;
   max-width: 600px;
   border-radius: 15px;
+  border: 1px solid #075e54;
+  padding: 2px, 0;
+}
+.form-select{
+  margin-top: 12px;
+  border: 1px solid #075e54;
+  background: transparent;
+  height: 34px;
+  width: 80%;
+  max-width: 604px;
+  border-radius: 15px;
 }
 .submit{
   height: 32px;
-  background-color: var(--primary-color);
-  color: var(--primary-bg-color);
+  background:#075e54;
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
 }

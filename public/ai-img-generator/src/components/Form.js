@@ -25,7 +25,7 @@ const Form = ({ generateImgRequest, cleanImg }) => {
         />
         <select
           name='size'
-          className='form-input'
+          className='form-select'
           placeholder='Select one Size'
           id='size'
         >

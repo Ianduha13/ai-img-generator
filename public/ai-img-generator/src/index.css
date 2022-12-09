@@ -10,10 +10,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: var(--primary-bg-color);
+  background-color: #fff;
   color: var(--primary-color);
-  --secondary-bg-color: #075e54;
-  --secondary-color: #fff;
 }
 .card-container{
   width: 100vw;

@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: space-between;
   height: 54px;
-  background: var(--secondary-bg-color);
-  color: var(--secondary-color);
+  background:#075e54;
+  color:#fff; 
   box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.6);
 }
 .navbar-right{
@@ -14,6 +14,9 @@
   padding-right: 32px;
   align-items: center;
   margin-right: 4px;
+}
+.navbar-right a{
+  padding-left: 12px ;
 }
 .navbar-right button{
   background: transparent;
