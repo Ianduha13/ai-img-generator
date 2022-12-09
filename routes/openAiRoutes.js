@@ -1,6 +1,6 @@
 const express = require("express")
-const { generateImage } = require("../controllers/openaiController")
 const router = express.Router()
+const { generateImage } = require("../controllers/openaiController")
 
 router.post("/generateimage", generateImage)
 
