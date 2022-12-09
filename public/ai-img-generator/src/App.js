@@ -4,6 +4,8 @@ import Form from "./components/Form"
 import Navbar from "./components/Navbar"
 import Card from "./components/Card"
 
+const apiUrl = process.env.API_URL
+
 const App = () => {
   const [imgUrl, setImg] = useState([])
   const [showImg, setShow] = useState("hidden")
@@ -16,7 +18,7 @@ const App = () => {
   const generateImgRequest = async (prompt, size) => {
     try {
       showSpinner()
-      const response = await fetch("/openai/generateimage", {
+      const response = await fetch(`${apiUrl}/openai/generateimage`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
