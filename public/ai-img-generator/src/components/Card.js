@@ -1,8 +1,8 @@
 import "./styles/cards.css"
-const Card = ({ url }) => {
+const Card = ({ url, showImg = "hidden" }) => {
   return (
     <div className='card'>
-      <img src={`${url}`} alt='img-generated' />
+      <img className={`${showImg}`} src={`${url}`} alt='img-generated' />
     </div>
   )
 }

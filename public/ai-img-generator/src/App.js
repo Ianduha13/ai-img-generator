@@ -6,11 +6,7 @@ import Card from "./components/Card"
 
 function App() {
   const [imgUrl, setImg] = useState()
-  const [theme, setTheme] = useState("dark")
-  const handleThemeChange = () => {
-    const newTheme = theme === "dark" ? "light" : "dark"
-    setTheme(newTheme)
-  }
+  const [showImg, setShow] = useState("hidden")
 
   const generateImgRequest = async (prompt, size) => {
     try {
@@ -33,6 +29,7 @@ function App() {
       console.log(data)
       setImg(data.data)
       deleteSpinner()
+      setShow("active")
     } catch (error) {
       console.log(error)
     }
@@ -44,10 +41,10 @@ function App() {
     document.querySelector(".spinner").classList.remove("show")
   }
   return (
-    <div className={`App ${theme}`}>
-      <Navbar theme={theme} handleThemeChange={handleThemeChange} />
+    <div className={`App`}>
+      <Navbar />
       <Form generateImgRequest={generateImgRequest} />
-      <Card url={imgUrl} />
+      <Card url={imgUrl} showImg={showImg} />
       <div className='spinner'></div>
     </div>
   )

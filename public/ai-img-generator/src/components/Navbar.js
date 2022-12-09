@@ -1,6 +1,6 @@
 import "./styles/navbar.css"
-import { FaGithub, FaMoon, FaSun } from "react-icons/fa"
-const Navbar = ({ theme, handleThemeChange }) => {
+import { FaGithub } from "react-icons/fa"
+const Navbar = () => {
   return (
     <nav className='navbar'>
       <div className='navbar-left'>
@@ -15,13 +15,6 @@ const Navbar = ({ theme, handleThemeChange }) => {
         >
           <FaGithub size='1.25em' color='white' />
         </a>
-        <button className='navbar-btn' onClick={handleThemeChange}>
-          {theme === "light" ? (
-            <FaMoon size='1.25em' color='white' />
-          ) : (
-            <FaSun size='1.25em' color='white' />
-          )}
-        </button>
       </div>
     </nav>
   )

@@ -14,12 +14,3 @@ body {
   --secondary-bg-color: #075e54;
   --secondary-color: #fff;
 }
-
-.dark{
-  --primary-color: #fff;
-  --primary-bg-color: rgb(13, 15, 12);
-}
-.light{
-  --primary-color:  rgb(13, 15, 12);
-  --primary-bg-color:#fff;
-}

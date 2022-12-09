@@ -13,6 +13,7 @@ const Form = ({ generateImgRequest }) => {
   return (
     <section className='form-section'>
       <header className='form-header'>Img Generation</header>
+      <h4>Using the DALLE-2 API</h4>
       <form className='form-control' onSubmit={(e) => onFormSubmit(e)}>
         <input
           type='text'
@@ -30,7 +31,7 @@ const Form = ({ generateImgRequest }) => {
           <option value='medium'>Medium</option>
           <option value='large'>Large</option>
         </select>
-        <button className='form-input submit'>Submit</button>
+        <button className='form-input submit'>Generate!</button>
       </form>
     </section>
   )
