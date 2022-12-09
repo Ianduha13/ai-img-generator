@@ -4,9 +4,14 @@ import Form from "./components/Form"
 import Navbar from "./components/Navbar"
 import Card from "./components/Card"
 
-function App() {
-  const [imgUrl, setImg] = useState()
+const App = () => {
+  const [imgUrl, setImg] = useState([])
   const [showImg, setShow] = useState("hidden")
+
+  const cleanImg = () => {
+    setImg([])
+    setShow("hidden")
+  }
 
   const generateImgRequest = async (prompt, size) => {
     try {
@@ -26,8 +31,7 @@ function App() {
         throw new Error("That image could not be generated")
       }
       const data = await response.json()
-      console.log(data)
-      setImg(data.data)
+      setImg((imgUrl) => [...imgUrl, data.data])
       deleteSpinner()
       setShow("active")
     } catch (error) {
@@ -43,8 +47,12 @@ function App() {
   return (
     <div className={`App`}>
       <Navbar />
-      <Form generateImgRequest={generateImgRequest} />
-      <Card url={imgUrl} showImg={showImg} />
+      <Form generateImgRequest={generateImgRequest} cleanImg={cleanImg} />
+      <div className='card-container'>
+        <Card url={imgUrl[0]} showImg={showImg} />
+        <Card url={imgUrl[1]} showImg={showImg} />
+        <Card url={imgUrl[2]} showImg={showImg} />
+      </div>
       <div className='spinner'></div>
     </div>
   )

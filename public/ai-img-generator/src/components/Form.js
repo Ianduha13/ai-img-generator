@@ -1,5 +1,5 @@
 import "./styles/form.css"
-const Form = ({ generateImgRequest }) => {
+const Form = ({ generateImgRequest, cleanImg }) => {
   const onFormSubmit = (e) => {
     e.preventDefault()
     const prompt = document.querySelector("#prompt").value
@@ -8,6 +8,8 @@ const Form = ({ generateImgRequest }) => {
       alert("Please add some text")
       return
     }
+    generateImgRequest(prompt, size)
+    generateImgRequest(prompt, size)
     generateImgRequest(prompt, size)
   }
   return (
@@ -29,9 +31,10 @@ const Form = ({ generateImgRequest }) => {
         >
           <option value='small'>Small</option>
           <option value='medium'>Medium</option>
-          <option value='large'>Large</option>
         </select>
-        <button className='form-input submit'>Generate!</button>
+        <button className='form-input submit' onClick={cleanImg}>
+          Generate!
+        </button>
       </form>
     </section>
   )

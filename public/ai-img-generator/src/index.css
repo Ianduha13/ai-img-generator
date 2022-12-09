@@ -5,12 +5,26 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
 }
 .App{
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   background-color: var(--primary-bg-color);
   color: var(--primary-color);
   --secondary-bg-color: #075e54;
   --secondary-color: #fff;
+}
+.card-container{
+  width: 100vw;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+@media (max-width: 1520px) {
+  .card-container{
+    flex-direction: column;
+  }
 }
