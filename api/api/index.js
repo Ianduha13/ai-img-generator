@@ -10,6 +10,6 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use(express.static(path.join(__dirname, "frontend")))
 
-app.use("/openai", require("./routes/openAiRoutes"))
+app.use("/openai", require("../routes/openAiRoutes"))
 
 export default app
