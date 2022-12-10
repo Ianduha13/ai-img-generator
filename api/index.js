@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(
   cors({
     origin: "https://ai-img-generator-front.vercel.app/",
+    methods: ["POST"],
   })
 )
 
