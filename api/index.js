@@ -15,8 +15,6 @@ app.use(
   })
 )
 
-app.use(express.static(path.join(__dirname, "../public/ai-img-generator")))
+app.use(express.static(path.join(__dirname, "ai-img-generator")))
 
-app.use("api/openai", require("./routes/openAiRoutes"))
-
-module.exports = app
+app.use("/api/openai", require("./routes/openAiRoutes"))
