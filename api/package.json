@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "client": "npm start --prefix ../public/ai-img-generator",
+    "client": "npm start --prefix ../frontend",
     "dev": "concurrently \"nodemon index\" \"npm run client\""
   },
   "keywords": [],
