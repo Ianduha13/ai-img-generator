@@ -4,7 +4,7 @@ import Form from "./components/Form"
 import Navbar from "./components/Navbar"
 import Card from "./components/Card"
 
-const apiUrl = process.env.API_URL
+const apiUrl = process.env.REACT_APP_API_URL
 
 const App = () => {
   const [imgUrl, setImg] = useState([])
