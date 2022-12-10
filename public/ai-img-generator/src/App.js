@@ -21,7 +21,7 @@ const App = () => {
       const response = await fetch(`${apiUrl}/api/openai/generateimage`, {
         method: "POST",
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           prompt,
