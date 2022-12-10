@@ -1,5 +1,6 @@
 const express = require("express")
 const path = require("path")
+const dotenv = require("dotenv").config()
 const cors = require("cors")
 const logger = require("morgan")
 
@@ -9,7 +10,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 
-app.get("/openai", (req, res) => res.end("Open AI API"))
-app.use("/api/openai", require("./routes/openAiRoutes"))
+app.use(express.static(path.join(__dirname, "public")))
 
-module.exports = app
+app.use("/openai", require("./routes/openAiRoutes"))
