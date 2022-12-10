@@ -13,6 +13,10 @@ app.use(
   })
 )
 
-app.use(express.static(path.join(__dirname, "ai-img-generator")))
+app.use(
+  express.static(
+    path.join(__dirname, "../public/ai-img-generator/build/index.html")
+  )
+)
 
 app.use("/api/openai", require("./routes/openAiRoutes"))
