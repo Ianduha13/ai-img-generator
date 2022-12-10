@@ -19,6 +19,7 @@ const App = () => {
     try {
       showSpinner()
       const response = await fetch(`${apiUrl}/api/openai/generateimage`, {
+        mode: "no-cors",
         method: "POST",
         headers: {
           "Content-Type": "application/json",

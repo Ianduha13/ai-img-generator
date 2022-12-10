@@ -4,12 +4,7 @@ const dotenv = require("dotenv").config()
 const cors = require("cors")
 
 const app = express()
-app.use(
-  cors({
-    origin: "https://ai-img-generator-front.vercel.app/",
-    methods: ["POST"],
-  })
-)
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
