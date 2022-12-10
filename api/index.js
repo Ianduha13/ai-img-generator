@@ -12,4 +12,4 @@ app.use(express.static(path.join(__dirname, "frontend")))
 
 app.use("/openai", require("./routes/openAiRoutes"))
 
-module.exports = app
+export default app
