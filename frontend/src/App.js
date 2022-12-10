@@ -18,7 +18,7 @@ const App = () => {
   const generateImgRequest = async (prompt, size) => {
     try {
       showSpinner()
-      const response = await fetch(`${apiUrl}/api/openai/generateimage`, {
+      const response = await fetch(`${apiUrl}/openai/generateimage`, {
         mode: "no-cors",
         method: "POST",
         headers: {
