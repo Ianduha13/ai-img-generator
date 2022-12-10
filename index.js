@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use(express.static(path.join(__dirname, "public")))
 
+app.get("/openai", (req, res) => res.end("Open AI API"))
 app.use("/openai", require("./routes/openAiRoutes"))
 
 module.exports = app
