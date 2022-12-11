@@ -17,7 +17,6 @@ const App = () => {
 
   const generateImgRequest = async (prompt, size) => {
     try {
-      showSpinner()
       const response = await fetch(`${apiUrl}/openai/generateimage`, {
         method: "POST",
         headers: {
@@ -49,7 +48,11 @@ const App = () => {
   return (
     <div className={`App`}>
       <Navbar />
-      <Form generateImgRequest={generateImgRequest} cleanImg={cleanImg} />
+      <Form
+        generateImgRequest={generateImgRequest}
+        showSpinner={showSpinner}
+        cleanImg={cleanImg}
+      />
       <div className='card-container'>
         <Card url={imgUrl[0]} showImg={showImg} />
         <Card url={imgUrl[1]} showImg={showImg} />

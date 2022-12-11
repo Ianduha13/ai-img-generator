@@ -1,5 +1,5 @@
 import "./styles/form.css"
-const Form = ({ generateImgRequest, cleanImg }) => {
+const Form = ({ generateImgRequest, cleanImg, showSpinner }) => {
   const onFormSubmit = (e) => {
     e.preventDefault()
     const prompt = document.querySelector("#prompt").value
@@ -11,11 +11,21 @@ const Form = ({ generateImgRequest, cleanImg }) => {
     generateImgRequest(prompt, size)
     generateImgRequest(prompt, size)
     generateImgRequest(prompt, size)
+    showSpinner()
   }
   return (
     <section className='form-section'>
       <header className='form-header'>Img Generation</header>
-      <h4>Using the DALLE-2 API</h4>
+      <h4>
+        Using the{" "}
+        <a
+          href='https://beta.openai.com/docs/guides/images'
+          target={"_blank"}
+          rel='noreferrer'
+        >
+          DALLE-2 API
+        </a>
+      </h4>
       <form className='form-control' onSubmit={(e) => onFormSubmit(e)}>
         <input
           type='text'
