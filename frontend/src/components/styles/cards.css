@@ -1,3 +1,11 @@
+.card-container{
+  width: 100vw;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
 .card{
   margin-top: 12px;
   width: 100%;
@@ -9,3 +17,4 @@
 .hidden{
   display: none;
 }
+

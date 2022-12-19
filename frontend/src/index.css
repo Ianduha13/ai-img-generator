@@ -13,16 +13,3 @@ body {
   background-color: #fff;
   color: var(--primary-color);
 }
-.card-container{
-  width: 100vw;
-  margin-top: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-@media (max-width: 1520px) {
-  .card-container{
-    flex-direction: column;
-  }
-}
