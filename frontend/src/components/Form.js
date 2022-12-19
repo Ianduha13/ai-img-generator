@@ -23,7 +23,7 @@ const Form = ({ generateImgRequest, cleanImg, showSpinner }) => {
 					target={"_blank"}
 					rel='noreferrer'
 				>
-					DALLE-2 API
+				    <p> DALLE-2 API</p>
 				</a>
 			</h4>
 			<form className='form-control' onSubmit={(e) => onFormSubmit(e)}>
