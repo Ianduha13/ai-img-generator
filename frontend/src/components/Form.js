@@ -17,7 +17,7 @@ const Form = ({ generateImgRequest, cleanImg, showSpinner }) => {
 		<section className='form-section'>
 			<header className='form-header'>Img Generation</header>
 			<h4>
-				Using the
+				Using the 
 				<a
 					href='https://beta.openai.com/docs/guides/images'
 					target={"_blank"}
