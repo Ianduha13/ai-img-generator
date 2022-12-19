@@ -7,9 +7,9 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": "node index",
+    "start": "node api/index",
     "client": "npm start --prefix ../frontend",
-    "dev": "concurrently \"nodemon index\" \"npm run client\""
+    "dev": "concurrently \"npm start \" \"npm run client\""
   },
   "keywords": [],
   "author": "",

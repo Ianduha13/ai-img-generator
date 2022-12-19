@@ -1,8 +1,10 @@
 .card{
   margin-top: 12px;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  gap: 2rem;
+  grid-auto-rows: 30rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(50%, 30rem), 1fr)) ;
 }
 .hidden{
   display: none;
