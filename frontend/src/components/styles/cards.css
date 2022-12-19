@@ -1,20 +1,21 @@
 .card-container{
   width: 100vw;
-  margin-top: 12px;
+  margin-top: 16px;
   display: flex;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
 }
-.card{
-  margin-top: 12px;
-  width: 100%;
-  display: grid;
-  gap: 2rem;
-  grid-auto-rows: 30rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(50%, 30rem), 1fr)) ;
+.img-generated{
+  object-fit: cover;
 }
 .hidden{
   display: none;
+}
+@media (max-width:600px) {
+  .card-container{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
